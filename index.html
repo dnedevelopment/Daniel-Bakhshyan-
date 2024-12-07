@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daniel Bakhshyan</title>
+    <style>
+        form {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-gap: 10px; /* Space between columns */
+            max-width: 400px;
+            align-items: center;
+        }
+        label {
+            text-align: right;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+        }
+        button {
+            grid-column: span 2;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <b>Armenia</b> is located in the South of Caucasus.<br>
+    <center><i>USA isn't</i></center>
+    <p>Hi</p>
+    <a href="1-illustration-of-human-eye-science-source.jpg">An eye</a>
+    <ul>
+        <li>Home</li>
+        <li>About me</li>
+    </ul>
+    <form>
+        <label for="emailField">Email:</label>
+        <input type="text" id="emailField">
+        
+        <label for="passwordField">Password:</label>
+        <input type="password" id="passwordField">
+        
+        <button type="button" onclick="togglePassword()">Show/Hide Password</button>
+        <input type="submit" value="Log in">
+    </form>
+    <table>
+        <tr>
+            <td>Field 1</td>
+            <td>Field 2</td>
+        </tr>
+    </table>
+    <script>
+        function togglePassword() {
+            const passwordField = document.getElementById("passwordField");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+            } else {
+                passwordField.type = "password";
+            }
+        }
+    </script>
+</body>
+</html>
